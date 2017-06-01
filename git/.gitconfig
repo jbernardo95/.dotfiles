@@ -1,0 +1,24 @@
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+[user]
+  name = Joao Bernardo
+  email = jb.amaro95@gmail.com
+[github]
+  user = jbernardo95
+[color]
+  ui = true
+[pull]
+  rebase = true 
+[alias]
+  ls = ls-files
+  stash-all = stash save --include-untracked
+  tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+[status]
+  showUntrackedFiles = all
+[diff]
+  tool = icdiff
+[difftool]
+  prompt = false
+[difftool "icdiff"]
+  cmd = icdiff --line-numbers $LOCAL $REMOTE
