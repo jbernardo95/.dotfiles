@@ -10,7 +10,7 @@ ZSH_THEME="kolo"
 export UPDATE_ZSH_DAYS=7
 
 # ZSH Plugins
-plugins=(git zsh-syntax-highlighting)
+plugins=(zsh-syntax-highlighting bundler compleat docker gem git httpie npm rails redis-cli vagrant yarn)
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

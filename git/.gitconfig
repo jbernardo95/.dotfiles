@@ -25,3 +25,7 @@
   cmd = icdiff --line-numbers $LOCAL $REMOTE
 [commit]
   gpgsign = true
+[branch]
+  autosetuprebase = always
+[push]
+  default = simple
