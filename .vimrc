@@ -53,13 +53,6 @@ Plugin 'mattn/gist-vim'
 " General languages support
 Plugin 'sheerun/vim-polyglot'
 
-" JS support
-Plugin 'mxw/vim-jsx'
-Plugin 'isRuslan/vim-es6'
-
-" elixir support
-Plugin 'elixir-lang/vim-elixir'
-
 Plugin 'tpope/vim-rails'
 
 " Colors
@@ -101,7 +94,7 @@ set showmatch
 set laststatus=2
 
 " Font
-set guifont=Inconsolata:h17
+" terminal vim uses the same font as the terminal
 
 " Colors
 colorscheme Tomorrow-Night
@@ -147,7 +140,7 @@ let g:airline#extensions#whitespace#enabled=0
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 
-"" The Silver Searcher
+" The Silver Searcher
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
@@ -159,9 +152,16 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+" Javascript
+let g:javascript_plugin_flow = 1
+let g:jsx_ext_required = 0
+
 " MacVim Only
 if has("gui_running")
   set transparency=2
+  
+  " Font
+  set guifont=Inconsolata:h17
 
   " GUI Options
   set guioptions=T
