@@ -8,9 +8,13 @@
 
 *1Password* configurations are [here](1password.md)
 
-## Keys
+## SSH
 
-### GPG keys
+1. Download SSH keys from 1Password to `~/.ssh/id_rsa` (private) and `~/.ssh/id_rsa.pub` (public)
+2. Set key files permissions `chmod 600 ~/.ssh/id_rsa` and `chmod 644 ~/.ssh/id_rsa.pub`
+3. Add private key to *ssh-agent* `ssh-add -K ~/.ssh/id_rsa`
+
+## GPG
 
 Import GPG keys from Keybase: 
 

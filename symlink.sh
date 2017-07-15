@@ -37,6 +37,13 @@ else
   echo "$HOME/.gitignore already exists" >&2
 fi
 
+if [ ! -e "$HOME/.ssh/config" ]
+then
+  ln -s $PWD/ssh/config $HOME/.ssh/config
+else
+  echo "$HOME/.ssh/config already exists" >&2
+fi
+
 if [ ! -e "$HOME/.ctags" ]
 then
   ln -s $PWD/.ctags $HOME/.ctags
