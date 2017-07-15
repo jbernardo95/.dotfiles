@@ -1,4 +1,6 @@
-# Alfred Preferences
+# Alfred Configurations 
+
+Open *Alfred Preferences* and setup the following configurations:
 
 ## General
 

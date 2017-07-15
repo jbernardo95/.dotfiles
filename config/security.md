@@ -1,6 +1,16 @@
 # Security Configurations
 
-## GPG keys
+## macOS 
+
+*macOS* Security configurations are [here](mac_os.md)
+
+## Passwords
+
+*1Password* configurations are [here](1password.md)
+
+## Keys
+
+### GPG keys
 
 Import GPG keys from Keybase: 
 

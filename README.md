@@ -28,13 +28,15 @@ Third party applications listed [here](third_party.md) can not be installed auto
 To setup all the configurations follow these steps:
 
 1. Symlink dotfiles: `sh symlink.sh`
-2. Open Preferences and setup them according to [this](mac_os_config.md) list
-3. Open iTerm > Preferences > Select `Load preferences from a custom folder or URL` to load from `~/.iterm`
-4. Open Alfred Preferences and setup them according to [this](alfred.md) list
-5. Install [oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
-6. Install [Vundle](https://github.com/VundleVim/Vundle.vim), open vim and run `:PluginInstall`
-7. Install atom packages `apm install --packages-file atom/package.list`
-8. Follow security configurations seteps [here](security.md) 
+2. Install [oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
+3. Install [Vundle](https://github.com/VundleVim/Vundle.vim), open *vim* and run `:PluginInstall`
+4. Install atom packages `apm install --packages-file atom/package.list`
+5. In *iTerm* go to Preferences > Select `Load preferences from a custom folder or URL` to load from `~/.iterm`
+6. Setup *macOS* configurations according to [this](config/mac_os.md)
+7. Setup *Alfred* configurations according to [this](config/alfred.md)
+8. Setup *Spectacle* configurations according to [this](config/spectacle.md)
+9. Setup *1Password* configurations according to [this](config/1password.md)
+10. Setup security configurations according to [this](config/security.md)
 
 ## Extras
 
