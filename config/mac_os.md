@@ -35,12 +35,27 @@ Open *Preferences* and setup the following configurations:
 ### Keyboard
 
 - Key repeat and Delay Until Repeat: Maximum
-- `Cmd + Space` - Alfred
-- `Alt + Space` - Spotlight 
+
+#### Shortcuts
+
+Mission Control
+
 - `Ctrl + Right Arrow` and `Ctrl + Left Arrow` - move between Mission Control Spaces 
 - `Ctrl + Up Arrow` - Mission Control
 - `Ctrl + Down Arrow` - Application Windows
+
+Keyboard 
+
 - `Cmd + §` - Move focus next window
+
+Spotlight
+
+- `Alt + Space` - Show Spotlight search 
+
+App Shortcuts
+
+- `Alt + Cmd + H` - History->Home 
+- `Shift + Cmd + H` - View->Developer->JavaScript Console
 
 ### Mouse
 
