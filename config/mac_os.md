@@ -16,6 +16,10 @@ Open *Preferences* and setup the following configurations:
 - Postion: Left
 - Automatically hide and show dock: Yes
 
+### Mission Control
+
+Automatically rearrange Spaces based on most recent use: Off
+
 ### Security and Privacy
 
 - Require password: immediately
