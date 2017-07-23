@@ -24,6 +24,9 @@ Plugin 'ervandew/supertab'
 " ctrlp.vim
 Plugin 'kien/ctrlp.vim'
 
+" ack.vim
+Plugin 'mileszs/ack.vim'
+
 " airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -120,6 +123,7 @@ set splitright
 
 " Maps
 map <Leader>r :%s/
+map <Leader>f :Ack!<SPACE>
 map <leader>nt :NERDTree<CR>
 map <leader>t :CtrlPTag<CR>
 map <leader>tb :Tagbar<CR>
@@ -150,7 +154,13 @@ if executable('ag')
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
+
+  " Use ag in ack.vim
+  let g:ackprg = 'ag --vimgrep'
 endif
+
+" Set ack.vim quickfix window size
+let g:ack_qhandler = "botright copen 20"
 
 " Javascript
 let g:javascript_plugin_flow = 1
