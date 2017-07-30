@@ -9,23 +9,27 @@
   user = jbernardo95
 [color]
   ui = true
-[pull]
-  rebase = true 
-[alias]
-  ls = ls-files
-  stash-all = stash save --include-untracked
-  tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
-[status]
-  showUntrackedFiles = all
-[diff]
-  tool = icdiff
-[difftool]
-  prompt = false
-[difftool "icdiff"]
-  cmd = icdiff --line-numbers $LOCAL $REMOTE
 [commit]
   gpgsign = true
 [branch]
   autosetuprebase = always
 [push]
   default = simple
+[pull]
+  rebase = true 
+[merge]
+  ff = only
+[status]
+  showUntrackedFiles = all
+[alias]
+  pr = !hub pull-request
+  upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
+  uncommit = reset --soft HEAD^
+  stash-all = stash save --include-untracked
+  tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+[diff]
+  tool = icdiff
+[difftool]
+  prompt = false
+[difftool "icdiff"]
+  cmd = icdiff --line-numbers $LOCAL $REMOTE

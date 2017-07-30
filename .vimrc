@@ -1,11 +1,11 @@
 " .vimrc
 " Creator - Joao Bernardo
-" URL - https://github.com/jbernardo95/.dotfiles 
+" URL - https://github.com/jbernardo95/.dotfiles
 
-" Vundle BEGIN ------------------- 
+" Vundle BEGIN -------------------
 
-set nocompatible              
-filetype off                 
+set nocompatible
+filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -37,17 +37,19 @@ Plugin 'tpope/vim-surround'
 " tabular
 Plugin 'godlygeek/tabular'
 
-" NERD Commenter 
+" NERD Commenter
 Plugin 'scrooloose/nerdcommenter'
 
-" NERD Tree 
+" NERD Tree
 Plugin 'scrooloose/nerdtree'
 
 " ctags
 Plugin 'majutsushi/tagbar'
 
-" gitgutter
+" git
+Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'christoomey/vim-conflicted'
 
 " Gist
 Plugin 'mattn/webapi-vim'
@@ -62,11 +64,11 @@ Plugin 'tpope/vim-rails'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'ajh17/Spacegray.vim'
 
-call vundle#end()           
-filetype plugin indent on    
-filetype plugin on    
+call vundle#end()
+filetype plugin indent on
+filetype plugin on
 
-" Vundle END ----------------------- 
+" Vundle END -----------------------
 
 " General
 set encoding=utf-8
@@ -87,13 +89,13 @@ autocmd Filetype javascript setlocal tabstop=4 softtabstop=4 shiftwidth=4
 " Identation
 set autoindent
 set smartindent
-set smarttab 
-set copyindent 
+set smarttab
+set copyindent
 
-" UI 
+" UI
 set number
-"set relativenumber 
-set showmatch 
+"set relativenumber
+set showmatch
 set laststatus=2
 
 " Font
@@ -101,15 +103,15 @@ set laststatus=2
 
 " Colors
 colorscheme Tomorrow-Night
-syntax on 
+syntax on
 highlight Normal ctermbg=232426 " Match terminal background
 
 " Autocomplete in command line
 set showcmd
-set wildmenu                       
-set wildmode=longest,full    
+set wildmenu
+set wildmode=longest,full
 if exists("&wildignorecase")
-  set wildignorecase 
+  set wildignorecase
 endif
 
 " Searching
@@ -140,9 +142,9 @@ let g:gitgutter_enabled=1
 
 " airline
 let g:airline_theme='tomorrow'
-let g:airline#extensions#whitespace#enabled=0
 let g:airline_left_sep=''
 let g:airline_right_sep=''
+let g:airline#extensions#whitespace#enabled=0
 
 " The Silver Searcher
 if executable('ag')
@@ -169,7 +171,7 @@ let g:jsx_ext_required = 0
 " MacVim Only
 if has("gui_running")
   set transparency=2
-  
+
   " Font
   set guifont=Inconsolata:h17
 
