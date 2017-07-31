@@ -16,8 +16,11 @@ source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Alias
+alias cp='cp -iv'
+alias rm='rm -iv'
+alias mv='mv -iv'
 alias cdb='cd ../'
-
+alias du='du -cksh'
 alias ta='tmux attach'
 alias td='tmux detach'
 alias tk='tmux kill-session'
@@ -55,6 +58,8 @@ function ip() {
 }
 
 if [ $(uname) == "Darwin" ]; then
+  alias battery='pmset -g batt | grep "%" | awk "{print \$3}" | sed s/\;//g'
+
   function update() {
     brew update
     brew upgrade
