@@ -4,3 +4,4 @@
 --exclude=.git
 --exclude=.DS_Store
 --exclude=node_modules
+--exclude=.bundle

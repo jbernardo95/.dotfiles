@@ -44,6 +44,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 
 " ctags
+Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'majutsushi/tagbar'
 
 " git
@@ -54,6 +55,9 @@ Plugin 'christoomey/vim-conflicted'
 " Gist
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
+
+" Multicursors
+Plugin 'terryma/vim-multiple-cursors'
 
 " General languages support
 Plugin 'sheerun/vim-polyglot'
@@ -97,6 +101,7 @@ set number
 "set relativenumber
 set showmatch
 set laststatus=2
+autocmd VimResized * :wincmd =
 
 " Font
 " terminal vim uses the same font as the terminal
@@ -118,6 +123,10 @@ endif
 set incsearch " Search as characters are entered
 set hlsearch " Highlight search results
 set ignorecase
+
+" Tags
+set tags=.tags
+let g:gutentags_ctags_tagfile=".tags"
 
 " Split
 set splitbelow
@@ -162,7 +171,7 @@ if executable('ag')
 endif
 
 " Set ack.vim quickfix window size
-let g:ack_qhandler = "botright copen 20"
+let g:ack_qhandler = "botright copen 15"
 
 " Javascript
 let g:javascript_plugin_flow = 1
