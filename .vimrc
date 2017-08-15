@@ -64,6 +64,9 @@ Plugin 'sheerun/vim-polyglot'
 
 Plugin 'tpope/vim-rails'
 
+" Linting
+Plugin 'w0rp/ale'
+
 " Colors
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'ajh17/Spacegray.vim'
@@ -126,7 +129,7 @@ set ignorecase
 
 " Tags
 set tags=.tags
-let g:gutentags_ctags_tagfile=".tags"
+let g:gutentags_ctags_tagfile = ".tags"
 
 " Split
 set splitbelow
@@ -139,6 +142,7 @@ map <leader>nt :NERDTree<CR>
 map <leader>t :CtrlPTag<CR>
 map <leader>tb :Tagbar<CR>
 map <Leader>ct :!ctags ./<CR><CR>
+map <Leader>e :ALELint \| lopen <CR>
 
 " Disable Arrow Navigation
 map <up> <nop>
@@ -147,13 +151,14 @@ map <left> <nop>
 map <right> <nop>
 
 " gitgutter
-let g:gitgutter_enabled=1
+let g:gitgutter_enabled = 1
 
 " airline
-let g:airline_theme='tomorrow'
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:airline#extensions#whitespace#enabled=0
+let g:airline_theme = 'tomorrow'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#ale#enabled = 1
 
 " The Silver Searcher
 if executable('ag')
@@ -176,6 +181,16 @@ let g:ack_qhandler = "botright copen 15"
 " Javascript
 let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
+
+" ale
+let g:ale_echo_msg_format = '[%linter%] %s'
+let g:ale_sign_error = '*'
+let g:ale_sign_warning = '*'
+highlight ALEErrorSign ctermfg=Red guifg=Red
+highlight ALEWarningSign ctermfg=Yellow guifg=Yellow
+let g:ale_linters = {
+\ 'html': [],
+\}
 
 " MacVim Only
 if has("gui_running")
