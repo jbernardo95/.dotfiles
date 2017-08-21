@@ -22,7 +22,8 @@
 [status]
   showUntrackedFiles = all
 [alias]
-  pr = !hub pull-request
+  feature = "!f() { git checkout -b $1 && git push -u origin $1; }; f"
+  pr = "!f() { hub pull-request -b $1; }; f"
   upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
   uncommit = reset --soft HEAD^
   stash-all = stash save --include-untracked
