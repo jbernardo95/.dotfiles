@@ -12,7 +12,10 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-" SnipMate
+" editorconfig
+Plugin 'editorconfig/editorconfig-vim'
+
+" Snippets 
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
@@ -149,6 +152,9 @@ map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
+
+" editorconfig
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 " gitgutter
 let g:gitgutter_enabled = 1
