@@ -32,6 +32,7 @@ export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR='vim'
 export LANG=en_US.UTF-8
 export TERM='xterm-256color' # 256 Colors
+export GPG_TTY=$(tty)
 
 # RVM 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

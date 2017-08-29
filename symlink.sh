@@ -57,3 +57,10 @@ then
 else
   echo "$HOME/.iterm already exists" >&2
 fi
+
+if [ ! -e "$HOME/.gnupg/gpg-agent.conf" ]
+then
+  ln -s $PWD/gnupg/gpg-agent.conf $HOME/.gnupg/gpg-agent.conf
+else
+  echo "$HOME/.gnupg/gpg-agent.conf already exists" >&2
+fi
