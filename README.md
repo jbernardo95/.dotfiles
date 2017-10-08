@@ -35,8 +35,7 @@ To setup all the configurations follow these steps:
 6. Setup *macOS* configurations according to [this](config/mac_os.md)
 7. Setup *Alfred* configurations according to [this](config/alfred.md)
 8. Setup *Spectacle* configurations according to [this](config/spectacle.md)
-9. Setup *1Password* configurations according to [this](config/1password.md)
-10. Setup security configurations according to [this](config/security.md)
+9. Setup security configurations according to [this](config/security.md)
 
 ## Extras
 

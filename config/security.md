@@ -4,9 +4,14 @@
 
 *macOS* Security configurations are [here](mac_os.md)
 
-## Passwords
+## 1Password
 
-*1Password* configurations are [here](1password.md)
+Open *1Password* > Preferences and setup the following configurations:
+
+- `Shift + Cmd + L` - Lock 1Password 
+- `Shift + Cmd + K` - Show 1Password mini
+- Lock after computer is idle for: 1 minute
+- Clear clipboard contents after: 30 seconds
 
 ## SSH
 
