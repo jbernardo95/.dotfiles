@@ -32,10 +32,7 @@ To setup all the configurations follow these steps:
 3. Install [Vundle](https://github.com/VundleVim/Vundle.vim), open *vim* and run `:PluginInstall`
 4. Install atom packages `apm install --packages-file atom/package.list`
 5. In *iTerm* go to Preferences > Select `Load preferences from a custom folder or URL` to load from `~/.iterm`
-6. Setup *macOS* configurations according to [this](config/mac_os.md)
-7. Setup *Alfred* configurations according to [this](config/alfred.md)
-8. Setup *Spectacle* configurations according to [this](config/spectacle.md)
-9. Setup security configurations according to [this](config/security.md)
+6. Follow application specific configuration guides [here](config)
 
 ## Extras
 

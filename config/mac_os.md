@@ -87,6 +87,10 @@ App Shortcuts
 - src
 - tmp
 
+### Advanced
+
+- Show all filename extensions: On
+
 ### View Options
 
 Go to Desktop > Secondary Mouse Click > Show View Options

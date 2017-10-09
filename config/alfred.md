@@ -15,6 +15,13 @@ Alfred Hotkey: `Cmd + Space`
 
 - `trans` keyword for Translate
 
+## Clipboard
+
+- Keep plain text, images and files for `24 Hours`
+- Viewer Hotkey: `Cmd + Shift + V`
+- Viewer Keyboard: `clip`
+- Max Clip Size: `unlimited`
+
 ## System
 
 - Empty Trash: check confirm
