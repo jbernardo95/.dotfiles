@@ -4,7 +4,7 @@
 [user]
   name = Joao Bernardo
   email = jb.amaro95@gmail.com
-  signingkey = 21709B93EA888CA374EB11631CB2DECC5F97680F 
+  signingkey = BD7E37F9EE4D950F51FF44E98781CB06B296EE26
 [github]
   user = jbernardo95
 [color]
@@ -22,6 +22,7 @@
 [status]
   showUntrackedFiles = all
 [alias]
+  amend = commit --amend --no-edit
   feature = "!f() { git checkout -b $1 && git push -u origin $1; }; f"
   pr = "!f() { hub pull-request -b $1; }; f"
   upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
