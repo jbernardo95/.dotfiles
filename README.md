@@ -21,8 +21,6 @@ To install all the packages and applications:
 $ brew bundle 
 ```
 
-Third party applications listed [here](third_party.md) can not be installed automatically, so you need to go and get them by hand. 
-
 ### Configurations
 
 To setup all the configurations follow these steps:
