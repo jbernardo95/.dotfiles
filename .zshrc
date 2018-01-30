@@ -58,7 +58,18 @@ function ip() {
   ifconfig en1 | grep 'inet6 ' | sed -e 's/ / /' | awk '{print "en1 (IPv6): " $2 " " $3 " " $4 " " $5 " " $6}'
 }
 
-if [ $(uname) == "Darwin" ]; then
+function unban_ip_hn() {
+  ip=$(curl -s ipinfo.io/ip)
+  http GET "http://news.ycombinator.com/unban?ip=$ip" -o /dev/null
+
+  if [ $? = 0 ]; then
+    echo "Done, $ip unbanned"
+  else
+    echo "Failed"
+  fi
+}
+
+if [ $(uname) = "Darwin" ]; then
   alias battery='pmset -g batt | grep "%" | awk "{print \$3}" | sed s/\;//g'
 
   function update() {
