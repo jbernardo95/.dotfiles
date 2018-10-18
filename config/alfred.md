@@ -4,7 +4,7 @@ Open *Alfred Preferences* and setup the following configurations:
 
 ## General
 
-Alfred Hotkey: `Cmd + Space`
+- Alfred Hotkey: `Cmd + Space`
 
 ## File Search
 

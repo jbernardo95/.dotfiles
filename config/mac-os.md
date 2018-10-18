@@ -40,6 +40,19 @@ Automatically rearrange Spaces based on most recent use: Off
 
 - Key repeat and Delay Until Repeat: Maximum
 
+```
+https://github.com/tmux/tmux/issues/353#issuecomment-419286706
+https://apple.stackexchange.com/questions/10467/how-to-increase-keyboard-key-repeat-rate-on-os-x
+
+# Key Repeat
+# Normal minimum is 2 (30 ms)
+$ defaults write -g KeyRepeat -int 1
+
+# Delay Until Repeat
+# Normal minimum is 15 (225 ms)
+$ defaults write -g InitialKeyRepeat -int 10
+```
+
 #### Shortcuts
 
 Mission Control
@@ -77,7 +90,6 @@ App Shortcuts
 
 ### Sidebar
 
-- All My Files
 - User Folder
 - Dropbox
 - Desktop
@@ -98,9 +110,3 @@ Go to Desktop > Secondary Mouse Click > Show View Options
 - Icon Size: 40x40
 - Grid Spacing: 3/8
 - Label Position: Right
-
-## Notes
-
-Open *Notes* > Preferences and setup the following configurations:
-
-- Default text size: 3/5

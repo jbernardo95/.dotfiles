@@ -30,7 +30,8 @@ If old keys are necessary import them from 1Password:
 
 Import key from 1Password:
 
-1. Download PGP keys from 1Password to `~/private.key` (private) and `~/public.key` (public)
-2. `gpg --import public.key`
-3. `gpg --allow-secret-key-import --import private.key`
-4. `rm public.key private.key`
+1. Download PGP keys from 1Password to `~/public.keys` (public) and `~/private.keys` (private)
+2. `gpg --import public.keys`
+3. `gpg --import private.keys`
+4. `gshred public.key private.key`
+5. `rm public.key private.key`
