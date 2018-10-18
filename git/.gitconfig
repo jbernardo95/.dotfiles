@@ -4,7 +4,7 @@
 [user]
   name = Joao Bernardo
   email = jb.amaro95@gmail.com
-  signingkey = BD7E37F9EE4D950F51FF44E98781CB06B296EE26
+  signingkey = 87FE6728A572C3B0411947D4354C0601B1223F58 
 [github]
   user = jbernardo95
 [color]
@@ -22,16 +22,12 @@
 [status]
   showUntrackedFiles = all
 [alias]
+  current = rev-parse HEAD
   amend = commit --amend --no-edit
   feature = "!f() { git checkout -b $1 && git push -u origin $1; }; f"
   pr = "!f() { hub pull-request -b $1; }; f"
+  open = !hub browse
   upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
   uncommit = reset --soft HEAD^
   stash-all = stash save --include-untracked
-  tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
-[diff]
-  tool = icdiff
-[difftool]
-  prompt = false
-[difftool "icdiff"]
-  cmd = icdiff --line-numbers $LOCAL $REMOTE
+  tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches
