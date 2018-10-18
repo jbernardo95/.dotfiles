@@ -2,8 +2,6 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # ZSH Theme
-# ZSH_THEME="philips"
-# ZSH_THEME="bureau"
 ZSH_THEME="kolo"
 
 # Auto update zsh every 7 days
@@ -27,18 +25,11 @@ alias tk='tmux kill-session'
 
 # ENV Vars 
 export PATH="/usr/local/bin:$PATH"
-export PATH="$PATH:$HOME/.rvm/bin" # rvm
 export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR='vim'
-export LANG=en_US.UTF-8
+export LANG=en_GB.UTF-8
 export TERM='xterm-256color' # 256 Colors
 export GPG_TTY=$(tty)
-
-# RVM 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# NVM 
-[[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
 
 # Custom functions
 function cdd() {
@@ -76,6 +67,5 @@ if [ $(uname) = "Darwin" ]; then
     brew update
     brew upgrade
     brew cleanup 
-    brew cask cleanup 
   }
 fi
