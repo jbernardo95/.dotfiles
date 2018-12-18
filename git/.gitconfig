@@ -22,6 +22,7 @@
 [status]
   showUntrackedFiles = all
 [alias]
+  wip = commit -m "WIP"
   current = rev-parse HEAD
   amend = commit --amend --no-edit
   feature = "!f() { git checkout -b $1 && git push -u origin $1; }; f"
