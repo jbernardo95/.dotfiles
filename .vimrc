@@ -146,8 +146,9 @@ map <Leader>f :Ack!<SPACE>
 map <leader>nt :NERDTree<CR>
 map <leader>t :CtrlPTag<CR>
 map <leader>tb :Tagbar<CR>
-map <Leader>ct :!ctags ./<CR><CR>
+map <Leader>ct :!ctags ./<CR>
 map <Leader>e :ALELint \| lopen <CR>
+map <Leader>fn :call system('pbcopy', @%)<CR>
 
 " Disable Arrow Navigation
 map <up> <nop>
