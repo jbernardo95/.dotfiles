@@ -22,13 +22,14 @@
 [status]
   showUntrackedFiles = all
 [alias]
-  wip = commit -m "WIP"
-  current = rev-parse HEAD
   amend = commit --amend --no-edit
+  backup = "!f() { current_branch=$(git rev-parse --abbrev-ref HEAD); git checkout -b $current_branch-backup; }; f"
+  current = rev-parse HEAD
   feature = "!f() { git checkout -b $1 && git push -u origin $1; }; f"
-  pr = "!f() { hub pull-request -b $1; }; f"
   open = !hub browse
-  upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
-  uncommit = reset --soft HEAD^
+  pr = "!f() { hub pull-request -b $1; }; f"
   stash-all = stash save --include-untracked
   tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches
+  upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
+  uncommit = reset --soft HEAD^
+  wip = commit -m "WIP"
