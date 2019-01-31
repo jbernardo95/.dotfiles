@@ -161,6 +161,9 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 " gitgutter
 let g:gitgutter_enabled = 1
+highlight GitGutterAdd    guifg=#009900 guibg=#1a1b1d ctermfg=2 ctermbg=232426
+highlight GitGutterChange guifg=#009900 guibg=#1a1b1d ctermfg=3 ctermbg=232426
+highlight GitGutterDelete guifg=#009900 guibg=#1a1b1d ctermfg=1 ctermbg=232426
 
 " airline
 let g:airline_theme = 'tomorrow'
