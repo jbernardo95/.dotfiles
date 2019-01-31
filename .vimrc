@@ -143,18 +143,14 @@ set splitright
 " Maps
 map <Leader>r :%s/
 map <Leader>f :Ack!<SPACE>
+map <Leader>F y:Ack!<SPACE>'<C-R>"'<CR>
+map <Leader>/ y/<C-R>"<CR>
 map <leader>nt :NERDTree<CR>
 map <leader>t :CtrlPTag<CR>
 map <leader>tb :Tagbar<CR>
 map <Leader>ct :!ctags ./<CR>
 map <Leader>e :ALELint \| lopen <CR>
 map <Leader>fn :call system('pbcopy', @%)<CR>
-
-" Disable Arrow Navigation
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
 
 " editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
