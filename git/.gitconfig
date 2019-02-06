@@ -19,6 +19,11 @@
   rebase = true 
 [merge]
   ff = only
+  tool = opendiff
+[diff]
+  tool = opendiff
+[difftool]
+  prompt = false
 [status]
   showUntrackedFiles = all
 [alias]
