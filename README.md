@@ -28,9 +28,8 @@ To setup all the configurations follow these steps:
 1. Symlink dotfiles: `sh symlink.sh`
 2. Install [oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
 3. Install [Vundle](https://github.com/VundleVim/Vundle.vim), open *vim* and run `:PluginInstall`
-4. Install atom packages `apm install --packages-file atom/package.list`
-5. In *iTerm* go to Preferences > Select `Load preferences from a custom folder or URL` to load from `~/.iterm`
-6. Follow application specific configuration guides [here](config)
+4. In *iTerm* go to Preferences > Select `Load preferences from a custom folder or URL` to load from `~/.iterm`
+5. Follow application specific configuration guides [here](config)
 
 ## Extras
 
