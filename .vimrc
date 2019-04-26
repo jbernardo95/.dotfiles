@@ -200,6 +200,12 @@ let g:ale_linters = {
 \ 'html': [],
 \}
 
+" NERD Commenter
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
+
 " MacVim Only
 if has("gui_running")
   set transparency=2
