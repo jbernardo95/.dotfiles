@@ -106,9 +106,9 @@ set copyindent
 
 " UI
 set number
-"set relativenumber
 set showmatch
 set laststatus=2
+set colorcolumn+=1
 autocmd VimResized * :wincmd =
 
 " Font
