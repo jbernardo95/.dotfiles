@@ -2,3 +2,5 @@
 *.sw[nop]
 .env
 .tags
+.data/
+.vagrant/
