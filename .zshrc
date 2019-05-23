@@ -33,6 +33,10 @@ export LANG=en_GB.UTF-8
 export TERM='xterm-256color' # 256 Colors
 export GPG_TTY=$(tty)
 
+# rbenv
+# This must be set after PATH is set because it overrides it
+eval "$(rbenv init -)"
+
 # Custom functions
 function cdd() {
   mkdir -p "$1"
