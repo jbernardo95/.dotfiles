@@ -12,6 +12,7 @@
   ui = true
 [commit]
   gpgsign = true
+  verbose = true
 [branch]
   autosetuprebase = always
 [push]
