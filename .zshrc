@@ -8,20 +8,22 @@ ZSH_THEME="kolo"
 export UPDATE_ZSH_DAYS=7
 
 # ZSH Plugins
-plugins=(zsh-syntax-highlighting bundler compleat docker gem git httpie npm rails redis-cli vagrant yarn)
+plugins=(bundler compleat docker gem git node npm rails redis-cli tmux vagrant yarn)
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/etc/profile.d/z.sh
+source ~/.fzf.zsh
 
-# Alias
+# Aliases
 alias cp='cp -iv'
 alias rm='rm -iv'
 alias mv='mv -iv'
 alias cdb='cd ../'
-alias du='du -cksh'
 alias ta='tmux attach'
 alias td='tmux detach'
 alias tk='tmux kill-session'
+alias battery='pmset -g batt | grep "%" | awk "{print \$3}" | sed s/\;//g'
 
 # ENV Vars 
 export PATH="/usr/local/bin:$PATH"
