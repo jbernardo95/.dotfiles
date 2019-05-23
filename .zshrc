@@ -43,35 +43,69 @@ function cdd() {
   cd -P "$1"
 }
 
-function weather() {
-  curl -4 "http://wttr.in/$1"
+function update() {
+  brew upgrade
+  brew cleanup 
+
+  upgrade_oh_my_zsh
+
+  tldr --update
 }
 
-function ip() {
-  ifconfig lo0 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "lo0       : " $2}'
-  ifconfig en0 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "en0 (IPv4): " $2 " " $3 " " $4 " " $5 " " $6}'
-  ifconfig en0 | grep 'inet6 ' | sed -e 's/ / /' | awk '{print "en0 (IPv6): " $2 " " $3 " " $4 " " $5 " " $6}'
-  ifconfig en1 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "en1 (IPv4): " $2 " " $3 " " $4 " " $5 " " $6}'
-  ifconfig en1 | grep 'inet6 ' | sed -e 's/ / /' | awk '{print "en1 (IPv6): " $2 " " $3 " " $4 " " $5 " " $6}'
-}
+function encrypt-file() {
+  if [[ -z $1 ]]; then
+    echo "Usage: encrypt <file-to-encrypt>"
+    return 1
+  fi
 
-function unban_ip_hn() {
-  ip=$(curl -s ipinfo.io/ip)
-  http GET "http://news.ycombinator.com/unban?ip=$ip" -o /dev/null
+  gpg --output $1.encrypted --symmetric $1
 
-  if [ $? = 0 ]; then
-    echo "Done, $ip unbanned"
-  else
-    echo "Failed"
+  if [[ $? -eq 0 ]]; then
+    echo "File encrypted"
   fi
 }
 
-if [ $(uname) = "Darwin" ]; then
-  alias battery='pmset -g batt | grep "%" | awk "{print \$3}" | sed s/\;//g'
+function decrypt-file() {
+  if [[ -z $1 ]]; then
+    echo "Usage: decrypt <file-to-decrypt>"
+    return 1
+  fi
 
-  function update() {
-    brew update
-    brew upgrade
-    brew cleanup 
-  }
-fi
+  if [[ ! $1 =~ ".*\.encrypted" ]]; then
+    echo "File to decrypt must end in .encrypted"
+    return 1
+  fi
+
+  gpg --output ${1:0:-10} --decrypt $1
+
+  if [[ $? -eq 0 ]]; then
+    echo "File decrypted"
+  fi
+}
+
+function sync-folders() {
+  if [[ ! -d $1 ]] || [[ ! -d $2 ]]; then
+    echo "Usage: <source> <destination>"
+    return 1
+  fi
+
+  rsync -arzP --delete $1 $2
+
+  if [[ $? -eq 0 ]]; then
+    echo "$2 is in sync with $1"
+  fi
+}
+
+function start-local-postgres() {
+  if [[ -z $1 ]]; then
+    echo "Usage: start-local-postgresql-instance <instance-name>"
+    return 1
+  fi
+
+  docker run --rm \
+             --name $1 \
+             -e POSTGRES_PASSWORD= \
+             -p 5432:5432 \
+             -v $PWD/.data/postgres:/var/lib/postgresql/data \
+             postgres
+}
