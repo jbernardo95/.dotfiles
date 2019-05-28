@@ -15,6 +15,7 @@
   verbose = true
 [branch]
   autosetuprebase = always
+  sort = -committerdate
 [push]
   default = simple
 [pull]
