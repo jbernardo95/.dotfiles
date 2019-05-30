@@ -14,13 +14,23 @@ Open *Alfred Preferences* and setup the following configurations:
 ## Web Search
 
 - `trans` keyword for Translate
+- Urban Dictionary
+  - Search URL: `https://www.urbandictionary.com/define.php?term={query}`
+  - Title: Urban Dictionary
+  - Keyword: `ud`
 
 ## Clipboard
 
 - Keep plain text, images and files for `24 Hours`
 - Viewer Hotkey: `Cmd + Shift + V`
 - Viewer Keyboard: `clip`
+- Clear Keyboard: Disabled
 - Max Clip Size: `unlimited`
+
+## Snippets
+
+- Viewer Keyword: None
+- Snippet Keyword: Disabled
 
 ## System
 
