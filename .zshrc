@@ -27,11 +27,17 @@ alias battery='pmset -g batt | grep "%" | awk "{print \$3}" | sed s/\;//g'
 
 # ENV Vars 
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR='vim'
 export LANG=en_GB.UTF-8
 export TERM='xterm-256color' # 256 Colors
 export GPG_TTY=$(tty)
+
+# brew config
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_INSECURE_REDIRECT=1
+export HOMEBREW_CASK_OPTS=--require-sha
 
 # rbenv
 # This must be set after PATH is set because it overrides it
