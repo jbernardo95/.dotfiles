@@ -1,84 +1,76 @@
-" .vimrc
-" Creator - Joao Bernardo
-" URL - https://github.com/jbernardo95/.dotfiles
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" Vundle BEGIN -------------------
+call plug#begin('~/.vim/plugged')
 
-set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
+Plug 'junegunn/vim-plug'
 
 " editorconfig
-Plugin 'editorconfig/editorconfig-vim'
+Plug 'editorconfig/editorconfig-vim'
 
 " Snippets 
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-"Plugin 'honza/vim-snippets'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+"Plug 'honza/vim-snippets'
 
-" Supertab
-Plugin 'ervandew/supertab'
+" Auto completion
+Plug 'ervandew/supertab'
 
 " ctrlp.vim
-Plugin 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 
 " ack.vim
-Plugin 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 
 " airline
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " surround
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
 " tabular
-Plugin 'godlygeek/tabular'
+Plug 'godlygeek/tabular'
 
 " NERD Commenter
-Plugin 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 
 " NERD Tree
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 
 " ctags
-Plugin 'ludovicchabant/vim-gutentags'
-Plugin 'majutsushi/tagbar'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'majutsushi/tagbar'
 
 " git
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'christoomey/vim-conflicted'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'christoomey/vim-conflicted'
 
 " Gist
-Plugin 'mattn/webapi-vim'
-Plugin 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
+Plug 'mattn/gist-vim'
 
 " Multicursors
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors'
 
 " General languages support
-Plugin 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
 
-Plugin 'tpope/vim-rails'
+Plug 'tpope/vim-rails'
 
 " Linting
-Plugin 'w0rp/ale'
+Plug 'w0rp/ale'
 
 " Colors
-Plugin 'chriskempson/vim-tomorrow-theme'
-Plugin 'ajh17/Spacegray.vim'
+Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'ajh17/Spacegray.vim'
 
-call vundle#end()
-filetype plugin indent on
-filetype plugin on
-
-" Vundle END -----------------------
+call plug#end()
 
 " General
 set encoding=utf-8
