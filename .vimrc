@@ -19,6 +19,13 @@ Plug 'garbas/vim-snipmate'
 
 " Auto completion
 Plug 'ervandew/supertab'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" coc sources used:
+" coc-solargraph (Ruby, requires solargraph gem)
+" coc-elixir (Elixir)
+" coc-tsserver (Javascript)
+" coc-json (json)
+" coc-tabnine (all languages)
 
 " ctrlp.vim
 Plug 'kien/ctrlp.vim'
@@ -61,14 +68,11 @@ Plug 'terryma/vim-multiple-cursors'
 " General languages support
 Plug 'sheerun/vim-polyglot'
 
-Plug 'tpope/vim-rails'
-
 " Linting
 Plug 'w0rp/ale'
 
 " Colors
 Plug 'chriskempson/vim-tomorrow-theme'
-Plug 'ajh17/Spacegray.vim'
 
 call plug#end()
 
@@ -143,6 +147,7 @@ map <leader>tb :Tagbar<CR>
 map <Leader>ct :!ctags ./<CR>
 map <Leader>e :ALELint \| lopen <CR>
 map <Leader>fn :call system('pbcopy', @%)<CR>
+map <Leader>gd <Plug>(coc-definition)
 
 " editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
