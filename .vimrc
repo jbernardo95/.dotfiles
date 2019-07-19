@@ -183,10 +183,6 @@ endif
 " Set ack.vim quickfix window size
 let g:ack_qhandler = "botright copen 15"
 
-" Javascript
-let g:javascript_plugin_flow = 1
-let g:jsx_ext_required = 0
-
 " ale
 let g:ale_echo_msg_format = '[%linter%] %s'
 let g:ale_sign_error = '*'
