@@ -11,12 +11,6 @@ Plug 'junegunn/vim-plug'
 " editorconfig
 Plug 'editorconfig/editorconfig-vim'
 
-" Snippets 
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-"Plug 'honza/vim-snippets'
-
 " Auto completion
 Plug 'ervandew/supertab'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
