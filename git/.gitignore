@@ -1,7 +1,6 @@
 .DS_Store
 *.sw[nop]
 .env
-.tags
 .data/
 .vagrant/
 .bundle/

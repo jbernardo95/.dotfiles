@@ -49,10 +49,6 @@ Plug 'scrooloose/nerdcommenter'
 " NERD Tree
 Plug 'scrooloose/nerdtree'
 
-" ctags
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'majutsushi/tagbar'
-
 " git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -128,10 +124,6 @@ set incsearch " Search as characters are entered
 set hlsearch " Highlight search results
 set ignorecase
 
-" Tags
-set tags=.tags
-let g:gutentags_ctags_tagfile = ".tags"
-
 " Split
 set splitbelow
 set splitright
@@ -142,9 +134,6 @@ map <Leader>f :Ack!<SPACE>
 map <Leader>F y:Ack!<SPACE>'<C-R>"'<CR>
 map <Leader>/ y/<C-R>"<CR>
 map <leader>nt :NERDTree<CR>
-map <leader>t :CtrlPTag<CR>
-map <leader>tb :Tagbar<CR>
-map <Leader>ct :!ctags ./<CR>
 map <Leader>e :ALELint \| lopen <CR>
 map <Leader>fn :call system('pbcopy', @%)<CR>
 map <Leader>gd <Plug>(coc-definition)

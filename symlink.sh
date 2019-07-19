@@ -44,13 +44,6 @@ else
   echo "$HOME/.ssh/config already exists" >&2
 fi
 
-if [ ! -e "$HOME/.ctags" ]
-then
-  ln -s $PWD/.ctags $HOME/.ctags
-else
-  echo "$HOME/.ctags already exists" >&2
-fi
-
 if [ ! -e "$HOME/.iterm" ]
 then
   ln -s $PWD/iterm $HOME/.iterm
