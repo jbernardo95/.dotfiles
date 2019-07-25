@@ -86,6 +86,10 @@ App Shortcuts
 - Scroll Direction Natural: No
 - More gestures: all with three fingers, except swipe between pages with two
 
+### Accessibility
+
+- Display > Reduce motion: Yes
+
 ## Finder
 
 ### Sidebar
