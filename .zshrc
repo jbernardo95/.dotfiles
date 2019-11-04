@@ -95,7 +95,7 @@ function sync-folders() {
     return 1
   fi
 
-  rsync -arzP --delete $1 $2
+  rsync -arzP --delete --exclude='.Spotlight*' --exclude='.Trash*' --exclude='.TemporaryItems*' --exclude='.fseventsd' --exclude='.DS_Store' $1 $2
 
   if [[ $? -eq 0 ]]; then
     echo "$2 is in sync with $1"
