@@ -32,7 +32,7 @@
 [status]
   showUntrackedFiles = all
 [alias]
-  amend = commit --amend --no-edit
+  amend = "!f() { if [[ -z $1 ]]; then git commit --amend --no-edit; elif [[ $1 =~ "[0-9]+" ]]; then git commit --fixup HEAD~$1; GIT_EDITOR=true git rebase -i HEAD~$(expr $1 + 2); else echo \"Usage: git ammend <index>, where index is the index of the commit to ammend to\"; fi; }; f"
   backup = "!f() { current_branch=$(git rev-parse --abbrev-ref HEAD); git checkout -b $current_branch-backup; }; f"
   current = rev-parse HEAD
   feature = "!f() { git checkout -b $1 && git push -u origin $1; }; f"
