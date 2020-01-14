@@ -80,10 +80,6 @@ set tabstop=2 " Number of visual spaces per TAB
 set softtabstop=2 " Number of spaces a TAB counts for when editing
 set shiftwidth=2 " Number of space characters inserted for indentation
 
-" Custom file indentation
-autocmd Filetype javascript setlocal tabstop=4 softtabstop=4 shiftwidth=4
-autocmd Filetype erlang setlocal tabstop=4 softtabstop=4 shiftwidth=4
-
 " Identation
 set autoindent
 set smartindent
