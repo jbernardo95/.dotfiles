@@ -129,6 +129,7 @@ map <leader>nt :NERDTree<CR>
 map <Leader>e :ALELint \| lopen <CR>
 map <Leader>fn :call system('pbcopy', @%)<CR>
 map <Leader>gd <Plug>(coc-definition)
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
