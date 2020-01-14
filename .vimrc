@@ -57,6 +57,7 @@ Plug 'terryma/vim-multiple-cursors'
 
 " General languages support
 Plug 'sheerun/vim-polyglot'
+Plug 'Chiel92/vim-autoformat'
 
 " Linting
 Plug 'w0rp/ale'
@@ -85,6 +86,7 @@ set autoindent
 set smartindent
 set smarttab
 set copyindent
+let g:autoformat_autoindent = 0 " Disable autoindent
 
 " UI
 set number
