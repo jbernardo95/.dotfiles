@@ -43,6 +43,9 @@ export HOMEBREW_CASK_OPTS=--require-sha
 # This must be set after PATH is set because it overrides it
 eval "$(rbenv init -)"
 
+# Erlang/Elixir config
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 # Custom functions
 function cdd() {
   mkdir -p "$1"
