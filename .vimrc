@@ -87,6 +87,20 @@ set smartindent
 set smarttab
 set copyindent
 let g:autoformat_autoindent = 0 " Disable autoindent
+" This is required to make sure that mix format picks up the project config
+" This is specially important for umbrella projects where the config is inside
+" the app folder
+function! g:MixFormatLocal()
+  " Find closesest formatter config file
+  let l:formatter_config_file= findfile('.formatter.exs', '.;')
+  echo l:formatter_config_file
+  if formatter_config_file != ''
+    return 'mix format --dot-formatter ' . formatter_config_file . ' -'
+  else
+    return 'mix format -'
+  endif
+endfunction
+let g:formatdef_mix_format = "g:MixFormatLocal()"
 
 " UI
 set number
