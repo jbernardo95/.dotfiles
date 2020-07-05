@@ -48,10 +48,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-conflicted'
 
-" Gist
-Plug 'mattn/webapi-vim'
-Plug 'mattn/gist-vim'
-
 " Multicursors
 Plug 'terryma/vim-multiple-cursors'
 

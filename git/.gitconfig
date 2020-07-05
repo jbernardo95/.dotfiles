@@ -37,8 +37,6 @@
   current = rev-parse HEAD
   feature = "!f() { git checkout -b $1 && git push -u origin $1; }; f"
   history = "!f() { git log -p -- $1; }; f"
-  open = !hub browse
-  pr = "!f() { hub pull-request -b $1; }; f"
   stash-all = stash save --include-untracked
   tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches
   upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
