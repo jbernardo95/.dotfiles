@@ -21,10 +21,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " coc-json (json)
 " coc-tabnine (all languages)
 
-" ctrlp.vim
-Plug 'kien/ctrlp.vim'
+" fzf
+" requires fzf and ag
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 " ack.vim
+" requires ag
 Plug 'mileszs/ack.vim'
 
 " airline
@@ -131,6 +134,7 @@ set splitbelow
 set splitright
 
 " Maps
+map <C-p> :FZF<CR>
 map <Leader>r :%s/
 map <Leader>f :Ack!<SPACE>
 map <Leader>F y:Ack!<SPACE>'<C-R>"'<CR>
@@ -157,21 +161,26 @@ let g:airline_right_sep = ''
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#ale#enabled = 1
 
-" The Silver Searcher
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
+" fzf
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+" hex colors can't be configured using g:fzf_colors, so we configure them here manually
+let $FZF_DEFAULT_OPTS = "--color=bg:#1C1C1C,border:#88AFAF"
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.75 } }
 
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-
-  " Use ag in ack.vim
-  let g:ackprg = 'ag --vimgrep'
-endif
-
+" ack
+let g:ackprg = 'ag --vimgrep'
 " Set ack.vim quickfix window size
 let g:ack_qhandler = "botright copen 15"
 
