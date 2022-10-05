@@ -2,6 +2,8 @@
 
 Open *iA Writer* and setup the following configurations:
 
+View > Template > GitHub
+
 ## General
 
 Toolbar: Always Show
@@ -28,8 +30,8 @@ Toolbar: Always Show
 
 ## Editor
 
-- FontL: Monospaced
-- Text size: Medium
+- Font: Monospaced
+- Indent using: Spaces
 - Focus scope: Sentence
 - Spelling and grammar
   - Check spelling while typing: Yes
@@ -40,4 +42,3 @@ Toolbar: Always Show
   - Quotes: No
   - Dashes: No
   - Text replacement: Yes
-- Indent using: Spaces
