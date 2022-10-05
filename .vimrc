@@ -148,6 +148,7 @@ map <Leader>fn :call system('pbcopy', @%)<CR>
 map <Leader>gd <Plug>(coc-definition)
 map <Leader>ref <Plug>(coc-references)
 map <Leader>rn <Plug>(coc-rename)
+map <Leader>sc :setlocal spell spelllang=en_gb<CR>
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " editorconfig
