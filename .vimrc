@@ -146,6 +146,8 @@ map L gt
 map <Leader>e :ALELint \| lopen <CR>
 map <Leader>fn :call system('pbcopy', @%)<CR>
 map <Leader>gd <Plug>(coc-definition)
+map <Leader>ref <Plug>(coc-references)
+map <Leader>rn <Plug>(coc-rename)
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " editorconfig
