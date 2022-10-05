@@ -6,15 +6,31 @@ Open *Preferences* and setup the following configurations:
 
 ### General
 
-- Automatically hide and show the menu bar: Yes
 - Default web browser: Google Chrome
 
-### Dock
+### Dock & Menu Bar
 
-- Size: 25%
-- Magnification: No
-- Postion: Left
-- Automatically hide and show dock: Yes
+- General
+  - Size: 25%
+  - Magnification: No
+  - Postion: Left
+  - Automatically hide and show dock: Yes
+  - Show recent application in Dock: No
+  - Automatically hide and show the menu bar on desktop: Yes
+- Sound 
+    - Show in Menu Bar: No
+- Now playing 
+    - Show in Menu Bar: No
+- Battery
+    - Show percentage: Yes
+- Clock
+    - Show the day of the week: Yes
+    - Use 24-hour clock: Yes
+    - Display time with seconds: Yes
+- Spotlight 
+    - Show in Menu Bar: No
+- Siri 
+    - Show in Menu Bar: No
 
 ### Mission Control
 
@@ -69,11 +85,6 @@ Spotlight
 
 - `Alt + Space` - Show Spotlight search 
 
-App Shortcuts
-
-- `Alt + Cmd + H` - History->Home 
-- `Shift + Cmd + H` - View->Developer->JavaScript Console
-
 ### Mouse
 
 - Scroll Direction Natural: No
@@ -88,13 +99,27 @@ App Shortcuts
 
 ### Accessibility
 
+- Zoom > Use scroll gesture with modifier keys to zoom: Yes / Command
 - Display > Reduce motion: Yes
 
+### Sound
+
+- Play feedback when volume is changed: Yes
+
+### Network
+
+Set DNS servers to `1.1.1.1` and `1.0.0.1`.
+
 ## Finder
+
+### General
+
+New Finder windows show: Desktop
 
 ### Sidebar
 
 - User Folder
+- Airdrop
 - Dropbox
 - Desktop
 - Downloads
