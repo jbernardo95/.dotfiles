@@ -38,6 +38,10 @@ Open *Alfred Preferences* and setup the following configurations:
 - Restart: check confirm
 - Shutdown: check confirm
 
+## Workflows
+
+Import workflows in `alfred/`.
+
 ## Appearance
 
 - Select `Alfre macOS` theme 
