@@ -106,17 +106,3 @@ function sync-folders() {
     echo "$2 is in sync with $1"
   fi
 }
-
-function start-local-postgres() {
-  if [[ -z $1 ]]; then
-    echo "Usage: start-local-postgresql-instance <instance-name>"
-    return 1
-  fi
-
-  docker run --rm \
-             --name $1 \
-             -e POSTGRES_PASSWORD= \
-             -p 5432:5432 \
-             -v $PWD/.data/postgres:/var/lib/postgresql/data \
-             postgres
-}
