@@ -140,6 +140,9 @@ map <Leader>f :Ack!<SPACE>
 map <Leader>F y:Ack!<SPACE>'<C-R>"'<CR>
 map <Leader>/ y/<C-R>"<CR>
 map <leader>nt :NERDTree<CR>
+map <leader>t :tabnew<CR>
+map H gT
+map L gt
 map <Leader>e :ALELint \| lopen <CR>
 map <Leader>fn :call system('pbcopy', @%)<CR>
 map <Leader>gd <Plug>(coc-definition)
