@@ -8,7 +8,7 @@ ZSH_THEME="kolo"
 export UPDATE_ZSH_DAYS=7
 
 # ZSH Plugins
-plugins=(bundler compleat docker gem git node npm rails redis-cli tmux vagrant yarn)
+plugins=(bundler compleat docker gem git node npm rails redis-cli tmux vagrant yarn timer)
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -36,6 +36,7 @@ export EDITOR='vim'
 export LANG=en_GB.UTF-8
 export TERM='xterm-256color' # 256 Colors
 export GPG_TTY=$(tty)
+export TIMER_FORMAT='%d'
 
 # brew config
 export HOMEBREW_NO_ANALYTICS=1
