@@ -8,12 +8,13 @@ ZSH_THEME="kolo"
 export UPDATE_ZSH_DAYS=7
 
 # ZSH Plugins
-plugins=(bundler compleat docker gem git node npm rails redis-cli tmux vagrant yarn timer)
+plugins=(compleat docker git tmux timer)
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/etc/profile.d/z.sh
 source ~/.fzf.zsh
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 source <(kubectl completion zsh)
 
 # Aliases
@@ -56,9 +57,11 @@ function update() {
   brew upgrade
   brew cleanup 
 
-  upgrade_oh_my_zsh
+  omz update
 
   tldr --update
+
+  gcloud components update
 
   asdf plugin update --all
 }

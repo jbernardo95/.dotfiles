@@ -32,6 +32,4 @@ To setup all the configurations follow these steps:
 
 setup solargraph
 
-## Extras
 
-The base `Vagrantfile` I use in my project is available [here](Vagrantfile).

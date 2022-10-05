@@ -64,10 +64,3 @@ then
 else
   echo "$HOME/.config/karabiner/karabiner.json already exists" >&2
 fi
-
-if [ ! -e "$HOME/.bundle/config" ]
-then
-  ln -s $PWD/bundle/config $HOME/.bundle/config
-else
-  echo "$HOME/.bundle/config already exists" >&2
-fi
