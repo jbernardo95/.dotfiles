@@ -29,6 +29,8 @@ alias battery='pmset -g batt | grep "%" | awk "{print \$3}" | sed s/\;//g'
 # ENV Vars 
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+
+source $(brew --prefix asdf)/asdf.sh # This script changes the PATH so it needs to come after PATH is set
 export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR='vim'
 export LANG=en_GB.UTF-8
@@ -39,10 +41,6 @@ export GPG_TTY=$(tty)
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 export HOMEBREW_CASK_OPTS=--require-sha
-
-# rbenv
-# This must be set after PATH is set because it overrides it
-eval "$(rbenv init -)"
 
 # Erlang/Elixir config
 export ERL_AFLAGS="-kernel shell_history enabled"
@@ -60,6 +58,8 @@ function update() {
   upgrade_oh_my_zsh
 
   tldr --update
+
+  asdf plugin update --all
 }
 
 function encrypt-file() {

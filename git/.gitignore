@@ -5,3 +5,4 @@
 .vagrant/
 .bundle/
 .elixir_ls/
+.tool-versions
