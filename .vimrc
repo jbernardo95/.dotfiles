@@ -72,7 +72,7 @@ set termencoding=utf-8
 set autoread
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
-set updatetime=500
+set updatetime=1000
 
 " Tabs and spaces
 set expandtab " Tabs are spaces
