@@ -22,11 +22,8 @@
   rebase = true 
 [merge]
   ff = only
-  tool = opendiff
 [rebase]
   autosquash = true
-[diff]
-  tool = opendiff
 [difftool]
   prompt = false
 [status]
