@@ -141,6 +141,7 @@ map <Leader>F y:Ack!<SPACE>'<C-R>"'<CR>
 map <Leader>/ y/<C-R>"<CR>
 map <leader>nt :NERDTree<CR>
 map <leader>t :tabnew<CR>
+map <leader>gh :!gh browse %<CR><CR>
 map H gT
 map L gt
 map <Leader>e :ALELint \| lopen <CR>
