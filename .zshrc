@@ -31,7 +31,7 @@ alias battery='pmset -g batt | grep "%" | awk "{print \$3}" | sed s/\;//g'
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
-source $(brew --prefix asdf)/asdf.sh # This script changes the PATH so it needs to come after PATH is set
+source /usr/local/opt/asdf/libexec/asdf.sh
 export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR='vim'
 export LANG=en_GB.UTF-8
