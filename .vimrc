@@ -64,6 +64,9 @@ Plug 'w0rp/ale'
 " Colors
 Plug 'chriskempson/vim-tomorrow-theme'
 
+" Live search and replace
+Plug 'markonm/traces.vim'
+
 call plug#end()
 
 " General
