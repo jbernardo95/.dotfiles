@@ -39,6 +39,7 @@ fi
 
 if [ ! -e "$HOME/.ssh/config" ]
 then
+  mkdir -p $HOME/.ssh
   ln -s $PWD/ssh/config $HOME/.ssh/config
 else
   echo "$HOME/.ssh/config already exists" >&2
@@ -53,6 +54,7 @@ fi
 
 if [ ! -e "$HOME/.gnupg/gpg-agent.conf" ]
 then
+  mkdir -p $HOME/.gnupg
   ln -s $PWD/gnupg/gpg-agent.conf $HOME/.gnupg/gpg-agent.conf
 else
   echo "$HOME/.gnupg/gpg-agent.conf already exists" >&2
@@ -60,6 +62,7 @@ fi
 
 if [ ! -e "$HOME/.config/karabiner/karabiner.json" ]
 then
+  mkdir -p $HOME/.config/karabiner/karabiner.json
   ln -s $PWD/karabiner.json $HOME/.config/karabiner/karabiner.json
 else
   echo "$HOME/.config/karabiner/karabiner.json already exists" >&2
