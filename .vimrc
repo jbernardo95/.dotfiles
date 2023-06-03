@@ -14,12 +14,6 @@ Plug 'editorconfig/editorconfig-vim'
 " Auto completion
 Plug 'ervandew/supertab'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" coc sources used:
-" coc-solargraph (Ruby, requires solargraph gem)
-" coc-elixir (Elixir)
-" coc-tsserver (Javascript)
-" coc-json (json)
-" coc-tabnine (all languages)
 
 " fzf
 " requires fzf and ag
@@ -212,6 +206,9 @@ let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
+
+" coc
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-elixir', 'coc-solargraph', 'coc-tsserver']
 
 " MacVim Only
 if has("gui_running")
