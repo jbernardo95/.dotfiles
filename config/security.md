@@ -28,10 +28,12 @@ If old keys are necessary import them from 1Password:
 
 ## gpg
 
-Import key from 1Password:
+If you want to re-use keys for an existing identity:
 
 1. Download PGP keys from 1Password to `~/public.keys` (public) and `~/private.keys` (private)
 2. `gpg --import public.keys`
 3. `gpg --import private.keys`
 4. `gshred public.key private.key`
 5. `rm public.key private.key`
+
+If you want to generate new keys for a new identity, follow instructions on how to do it [here](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key).
