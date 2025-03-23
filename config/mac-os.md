@@ -4,57 +4,88 @@
 
 Open *Preferences* and setup the following configurations:
 
-### General
+### Network
+
+- Firewall: yes
+- Automatically allow downloaded signed software to receive incoming connections: No
+- Enable stealth mode: Yes
+
+Set DNS servers to `1.1.1.1` and `1.0.0.1`.
+
+### Accessibility
+
+- Zoom > Use scroll gesture with modifier keys to zoom: Yes / Command
+- Display > Reduce motion: Yes
+
+### Control Centre
+
+#### Control Centre Modules
+
+- Wi-if: Show in Menu Bar
+- Bluetooth: Show in Menu Bar
+- AirDrop: Don't show in Menu Bar
+- Focus: Show When Active
+- Stage Manager: Don't show in Menu Bar
+- Screen Mirroring: Show When Active
+- Display: Don't show in Menu Bar
+- Sound: Don't show in Menu Bar
+- Now Playing: Don't show in Menu Bar
+
+#### Other Modules
+
+- Battery:
+    - Show in Menu Bar: Yes
+    - Show Percentage: Yes
+
+#### Menu Bar Only
+
+- Clock:
+    - Show the day of the week: Yes
+    - Display the time in seconds: Yes
+- Spotlight: Don't Show in Menu Bar
+- Siri: Don't Show in Menu Bar
+- Automatically hide and show the menu bar: Always
+
+### Desktop and Dock
+
+#### Dock
+
+- Size: 25%
+- Magnification: Off
+- Postion: Left
+- Automatically hide and show dock: Yes
+- Show suggested and recent application in Dock: No
+
+#### Widgets
 
 - Default web browser: Google Chrome
 
-### Dock & Menu Bar
+#### Mission Control
 
-- General
-  - Size: 25%
-  - Magnification: No
-  - Postion: Left
-  - Automatically hide and show dock: Yes
-  - Show recent application in Dock: No
-  - Automatically hide and show the menu bar on desktop: Yes
-- Sound 
-    - Show in Menu Bar: No
-- Now playing 
-    - Show in Menu Bar: No
-- Battery
-    - Show percentage: Yes
-- Clock
-    - Show the day of the week: Yes
-    - Use 24-hour clock: Yes
-    - Display time with seconds: Yes
-- Spotlight 
-    - Show in Menu Bar: No
-- Siri 
-    - Show in Menu Bar: No
+- Automatically rearrange Spaces based on most recent use: Off
 
-### Mission Control
+### Notifications
 
-Automatically rearrange Spaces based on most recent use: Off
+- Allow notifications when the screen is locked: No
 
-### Security and Privacy
+### Sound
 
-- Require password: immediately
+- Play feedback when volume is changed: Yes
+
+### Lock Screen
+
+- Turn display off on battery when inactive: For 1 min
+- Turn display off on power adapter when inactive: For 1 min
+- Require password after screen saver begins or display is turned off: Immediately
+
+### Privacy & Security
+
 - FileVault: On
-- Firewall: On
-- Automatically allow signed software to receive incoming connections: No
-
-### Energy
-
-- Battery
-  - Turn display off after: 1 min
-  - Enable Power Nap while on battery power: No
-- Power Adapter
-  - Turn display off after: 1 min
-  - Prevent computer from sleeping automatically when the display is off: No
 
 ### Keyboard
 
-- Key repeat and Delay Until Repeat: Maximum
+- Key repeat rate: Maximum
+- Delay until repeat: Maximum
 
 ```
 https://github.com/tmux/tmux/issues/353#issuecomment-419286706
@@ -85,30 +116,12 @@ Spotlight
 
 - `Alt + Space` - Show Spotlight search 
 
-### Mouse
-
-- Scroll Direction Natural: No
-- Tracking, Double Click and Scrolling speed two ticks before maximum
-
 ### Trackpad
 
 - Secondary click: Click or tap with two fingers
 - Tap to Click: Yes
-- Scroll Direction Natural: No
+- Natural scrolling: No
 - More gestures: all with three fingers, except swipe between pages with two
-
-### Accessibility
-
-- Zoom > Use scroll gesture with modifier keys to zoom: Yes / Command
-- Display > Reduce motion: Yes
-
-### Sound
-
-- Play feedback when volume is changed: Yes
-
-### Network
-
-Set DNS servers to `1.1.1.1` and `1.0.0.1`.
 
 ## Finder
 
