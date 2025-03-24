@@ -1,5 +1,11 @@
 # Amphetamine
 
+## General
+
+Quick-Start a Session: Left click
+
+- Start sessions when Amphetamine launches: Yes
+
 ## Notifications
 
 - Notify when Trigger/schedule sessions auto-start: No
