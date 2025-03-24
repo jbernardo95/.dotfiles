@@ -2,7 +2,7 @@
 
 ## macOS 
 
-*macOS* Security configurations are [here](mac_os.md)
+*macOS* Security configurations are [here](mac-os.md)
 
 ## 1Password
 
@@ -11,10 +11,6 @@ Open *1Password* > Settings and setup the following configurations:
 - Security > Auto-lock > Lock after computer is idle for: `1 minute`
 - Security > Clipboard > Remove copied information and authentication codes after 90 seconds: `On`
 - Developer > Use the SSH agent: `On`
-
-## ssh
-
-If it is a new computer generate new ssh key in 1Password.
 
 ## gpg
 
