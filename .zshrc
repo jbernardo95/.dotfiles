@@ -10,6 +10,7 @@ export UPDATE_ZSH_DAYS=7
 # ZSH Plugins
 plugins=(compleat docker git tmux timer)
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
 source $ZSH/oh-my-zsh.sh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(fzf --zsh)"
