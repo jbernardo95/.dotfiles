@@ -1,7 +1,7 @@
 [core]
   excludesfile = ~/.gitignore
   editor = vim
-  pager = /usr/local/opt/git/share/git-core/contrib/diff-highlight/diff-highlight | less
+  pager = /opt/homebrew/opt/git/share/git-core/contrib/diff-highlight/diff-highlight | less
 [user]
   name = Joao Bernardo
   email = jb.amaro95@gmail.com
