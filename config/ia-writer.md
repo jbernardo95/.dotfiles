@@ -6,7 +6,9 @@ View > Template > GitHub
 
 ## General
 
-Toolbar: Always Show
+- File extensions: Show file extensions
+- Title bar: Yes
+- Toolbar: Yes
 
 ## Files
 
@@ -15,17 +17,15 @@ Toolbar: Always Show
 
 ## Library
 
-- View options
-  - Show extensions: No
 - Organiser
   - Favorites: Yes
   - Smart Folders: No 
   - Hashtags: No 
 - Files
-  - Pin folders to top: Yes 
-  - Text excerpts: No 
   - Sort bar: Yes 
   - Filter bar: Yes 
+  - Pin folders to top: Yes 
+  - Text excerpts: No 
 - Sort by: Name, A to Z
 
 ## Editor
