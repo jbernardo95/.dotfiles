@@ -1,5 +1,5 @@
 [core]
-  excludesfile = ~/.gitignore
+  excludesFile = ~/.gitignore
   editor = vim
   pager = /opt/homebrew/opt/git/share/git-core/contrib/diff-highlight/diff-highlight | less
 [user]
@@ -11,30 +11,40 @@
 [color]
   ui = true
 [commit]
-  gpgsign = true
+  gpgSign = true
   verbose = true
 [branch]
-  autosetuprebase = always
+  autoSetupRebase = always
   sort = -committerdate
+[fetch]
+  prune = true
+  all = true
 [push]
-  default = current
+  default = simple
   autoSetupRemote = true
 [pull]
   rebase = true 
 [merge]
   ff = only
-  conflictstyle = zdiff3
+  conflictStyle = zdiff3
 [rebase]
-  autosquash = true
-  autostash = true
+  autoSquash = true
+  autoStash = true
+  updateRefs = true
 [diff]
   algorithm = histogram
+  colorMoved = plain
+  mnemonicPrefix = true
+  renames = true
+[rerere]
+  enabled = true
+  autoUpdate = true
 [difftool]
   prompt = false
 [status]
   showUntrackedFiles = all
 [help]
-  autocorrect = prompt
+  autocorrect = 10
 [alias]
   amend = "!f() { if [[ -z $1 ]]; then git commit --amend --no-edit; elif [[ $1 =~ "[0-9]+" ]]; then git commit --fixup HEAD~$1; GIT_EDITOR=true git rebase -i HEAD~$(expr $1 + 2); else echo \"Usage: git ammend <index>, where index is the index of the commit to ammend to\"; fi; }; f"
   backup = "!f() { current_branch=$(git rev-parse --abbrev-ref HEAD); git checkout -b $current_branch-backup; }; f"
