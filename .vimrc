@@ -61,9 +61,6 @@ Plug 'chriskempson/vim-tomorrow-theme'
 " Live search and replace
 Plug 'markonm/traces.vim'
 
-" GitHub Copilot
-Plug 'github/copilot.vim'
-
 call plug#end()
 
 " General
