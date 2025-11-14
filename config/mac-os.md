@@ -14,37 +14,30 @@ Set DNS servers to `1.1.1.1` and `1.0.0.1`.
 
 ### Accessibility
 
-- Zoom > Use scroll gesture with modifier keys to zoom: Yes / Command
-- Display > Reduce motion: Yes
+- Zoom > Use scroll gesture with modifier keys to zoom: Yes
+- Zoom > Modifier key for scroll gesture: Command
+- Motion > Reduce motion: Yes
 
-### Control Centre
+### Menu Bar
 
-#### Control Centre Modules
-
-- Wi-if: Show in Menu Bar
-- Bluetooth: Show in Menu Bar
-- AirDrop: Don't show in Menu Bar
-- Focus: Show When Active
-- Stage Manager: Don't show in Menu Bar
-- Screen Mirroring: Show When Active
-- Display: Don't show in Menu Bar
-- Sound: Don't show in Menu Bar
-- Now Playing: Don't show in Menu Bar
-
-#### Other Modules
-
-- Battery:
-    - Show in Menu Bar: Yes
-    - Show Percentage: Yes
-
-#### Menu Bar Only
-
-- Clock:
-    - Show the day of the week: Yes
-    - Display the time in seconds: Yes
-- Spotlight: Don't Show in Menu Bar
-- Siri: Don't Show in Menu Bar
 - Automatically hide and show the menu bar: Always
+
+#### Modules
+
+- Clock
+    - Show the day of the week: Yes
+    - Display the time with seconds: Yes
+- Siri: Hide
+- Spotlight: Hide
+- Wi-if: Show
+- Bluetooth: Show
+- Battery: Show
+    - Show Percentage: Yes
+- Focus: Show When Active
+- Screen Mirroring: Show When Active
+- Display: Hide
+- Sound: Hide
+- Now Playing: Hide
 
 ### Desktop and Dock
 
