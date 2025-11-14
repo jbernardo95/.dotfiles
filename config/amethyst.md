@@ -6,13 +6,13 @@ Start Amethyst on login: `On`
 
 ## General
 
-- Display layout when changing spaces: `Off`
+- Hide menu bar icon: Yes
+- Display layout when changing spaces: No
 
 ## Layouts
 
-- Tall
 - Fullscreen
-- 3Column Middle
+- Tall
 
 ## Shortcuts
 
