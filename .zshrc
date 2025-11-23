@@ -8,7 +8,7 @@ ZSH_THEME="kolo"
 export UPDATE_ZSH_DAYS=7
 
 # ZSH Plugins
-plugins=(compleat docker git tmux timer)
+plugins=(docker gh git tmux timer)
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 source $ZSH/oh-my-zsh.sh
