@@ -55,6 +55,5 @@ cask "viscosity"
 cask "vlc"
 cask "zoom"
 mas "iA Writer", id: 775737590
-mas "Messenger", id: 1480068668
 mas "Things", id: 904280696
 mas "WhatsApp", id: 1147396723
