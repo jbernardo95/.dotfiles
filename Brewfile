@@ -1,8 +1,3 @@
-tap "homebrew/bundle"
-tap "homebrew/cask-drivers"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
-tap "homebrew/services"
 brew "autoconf"
 brew "coreutils"
 brew "asdf"
