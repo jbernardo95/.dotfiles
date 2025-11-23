@@ -33,6 +33,7 @@ cask "appcleaner"
 cask "blockblock"
 cask "coconutbattery"
 cask "docker"
+cask "domzilla-caffeine"
 cask "dropbox"
 cask "firefox"
 cask "font-inconsolata"
@@ -53,7 +54,6 @@ cask "transmission"
 cask "viscosity"
 cask "vlc"
 cask "zoom"
-mas "Amphetamine", id: 937984704
 mas "iA Writer", id: 775737590
 mas "Messenger", id: 1480068668
 mas "Things", id: 904280696
