@@ -42,6 +42,10 @@ Open *Alfred Preferences* and setup the following configurations:
 
 Import workflows in `alfred/`.
 
+Install third party:
+- [Unit Converted](https://alfred.app/workflows/alfredapp/unit-converter/)
+- [Currency Converter](https://alfred.app/workflows/alfredapp/currency-converter/)
+
 ## Appearance
 
 - Select `Alfre macOS` theme 
