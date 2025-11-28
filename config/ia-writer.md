@@ -27,6 +27,7 @@ View > Template > GitHub
   - Pin folders to top: Yes 
   - Text excerpts: No 
 - Sort by: Name, A to Z
+- Navigation: List
 
 ## Editor
 
