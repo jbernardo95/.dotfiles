@@ -106,3 +106,37 @@ function sync-folders() {
     echo "$2 is in sync with $1"
   fi
 }
+
+function vidtogif() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: vidtogif <input-video>"
+    return 1
+  fi
+
+  # Compute output path
+  local input="$1"
+  local base="${input##*/}"
+  base="${base%.*}"
+  local output="${base}.gif"
+
+  # Detect width from the input video
+  local width
+  width=$(ffprobe -v error -select_streams v:0 -show_entries stream=width -of csv=p=0 "$input")
+  if [[ -z "$width" ]]; then
+    echo "Error: Could not determine video width."
+    return 1
+  fi
+  echo "Detected width: $width px"
+
+  # Generate pallete
+  local palette="/tmp/vidtogif_palette.png"
+  echo "Generating palette..."
+  ffmpeg -y -i "$input" -vf "fps=12,scale=${width}:-1:flags=lanczos,palettegen" "$palette"
+
+  # Generate GIF
+  echo "Creating GIF..."
+  ffmpeg -y -i "$input" -i "$palette" -filter_complex "fps=12,scale=${width}:-1:flags=lanczos[x];[x][1:v]paletteuse" "$output"
+  rm -f "$palette"
+
+  echo "GIF saved to: $output"
+}
